@@ -150,6 +150,11 @@ h1 {
   white-space: nowrap;
 }
 
+/* ========== SCROLL OFFSET FOR FIXED NAV ========== */
+#menu-start, #most-ordered, #gallery, #about, #menu-gallery {
+  scroll-margin-top: 80px;
+}
+
 /* ========== MENU SECTIONS ========== */
 main { position: relative; z-index: 10; }
 
@@ -399,6 +404,78 @@ footer {
   color: rgba(245,230,211,0.35); text-transform: uppercase;
 }
 
+/* ========== DELIVERY BUTTONS ========== */
+.btn-delivery {
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  padding: 8px 18px;
+  text-decoration: none;
+  border: 2px solid currentColor;
+  transition: transform 0.12s, box-shadow 0.12s;
+  display: inline-flex; align-items: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.uber-btn {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+.uber-btn:hover {
+  background: #1a1a1a;
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 rgba(255,255,255,0.3);
+}
+.mrd-btn {
+  background: #e8002d;
+  color: #ffffff;
+  border-color: #e8002d;
+}
+.mrd-btn:hover {
+  background: #c4002a;
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+}
+
+/* ========== CONTACT CARDS ========== */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid var(--red);
+  padding: 32px 28px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+  min-width: 220px;
+  flex: 1;
+  max-width: 280px;
+}
+.contact-card:hover {
+  background: rgba(215,38,46,0.12);
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--red);
+}
+.contact-card-icon {
+  color: var(--red);
+}
+.contact-card-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: rgba(245,230,211,0.55);
+  text-transform: uppercase;
+}
+.contact-card-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cream);
+  word-break: break-all;
+  text-align: center;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
   .section-inner,
@@ -409,9 +486,12 @@ footer {
   .about-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  .nav-ctas .btn-secondary:not(:first-child) { display: none; }
+  .nav-ctas .btn-secondary { display: none; }
+  .nav-ctas .uber-btn { display: none; }
+  .nav-ctas .mrd-btn { display: none; }
   h1 { font-size: clamp(52px, 16vw, 80px); }
   .combo-block { padding: 36px 24px; }
   section.menu-section { padding: 60px 20px; }
   .menu-header h2 { font-size: 48px; }
+  .contact-card { min-width: 100%; max-width: 100%; }
 }
