@@ -5,14 +5,16 @@ const SITE_URL = 'https://asdcafe.com'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'ASD Cafe | Street Heat. Fast Eats. | African Spirits Distillery',
-  description: 'ASD Cafe – African Spirits Distillery Cafe. Ghost kitchen serving our famous 12-hour smoked brisket burgers, pizza, wings, wraps and corporate lunch menus. Order via WhatsApp, Uber Eats or Mr D. Fast pickup in 15–20 mins.',
+  title: 'ASD Cafe | Born Smoked. Served Fast. | African Spirits Distillery',
+  description: 'ASD Cafe – African Spirits Distillery Cafe. Born smoked, served fast. 12-hour smoked brisket burgers, pizza, wings, wraps and corporate lunch menus in South Africa. Order via WhatsApp, Uber Eats or Mr D Food. Ready in 15–20 mins.',
   keywords: [
-    'ASD Cafe', 'African Spirits Distillery', 'street food', 'burgers', 'brisket burger',
-    'smoked brisket', 'pizza', 'chicken wings', 'wraps', 'takeaway', 'fast food',
-    'ghost kitchen', 'lunch delivery', 'corporate lunch', 'loaded fries',
-    'order food online', 'Uber Eats', 'Mr Delivery', 'WhatsApp order',
-    'best burgers', 'South Africa food', 'fast casual dining'
+    'ASD Cafe', 'African Spirits Distillery Cafe', 'smoked brisket burger', 'brisket burger',
+    'ghost kitchen South Africa', 'best burgers South Africa', 'street food',
+    'loaded fries', 'chicken wings', 'pizza takeaway', 'wraps', 'protein bowl',
+    'corporate lunch delivery', 'bulk meal orders', 'fast food pickup',
+    'order food WhatsApp', 'Uber Eats burger', 'Mr D Food order',
+    'fast casual dining', 'takeaway near me', 'smoked brisket',
+    'ASD Cafe menu', 'pulled brisket pizza', 'halloumi wrap', 'cheese burger'
   ].join(', '),
   authors: [{ name: 'ASD Cafe' }],
   creator: 'ASD Cafe',
@@ -26,26 +28,26 @@ export const metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: 'ASD Cafe | Street Heat. Fast Eats.',
-    description: 'Ghost kitchen serving high-quality smoked brisket, bold flavors, and lightning-fast takeaway. Order via WhatsApp, Uber Eats or Mr D.',
+    title: 'ASD Cafe | Born Smoked. Served Fast.',
+    description: 'Ghost kitchen serving 12-hour smoked brisket burgers, loaded fries, pizza & wings. Fast pickup in 15–20 mins. Order on WhatsApp, Uber Eats or Mr D.',
     type: 'website',
     url: SITE_URL,
     siteName: 'ASD Cafe',
     locale: 'en_ZA',
     images: [
       {
-        url: '/images/real_asd_logo.png',
-        width: 800,
-        height: 600,
-        alt: 'ASD Cafe – Street Heat. Fast Eats.',
+        url: '/images/burger_photo.png',
+        width: 1200,
+        height: 630,
+        alt: 'ASD Cafe – Born Smoked. Served Fast.',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ASD Cafe | Street Heat. Fast Eats.',
-    description: 'Smoked brisket. Loaded burgers. No waiting around. Order in 60 seconds.',
-    images: ['/images/real_asd_logo.png'],
+    title: 'ASD Cafe | Born Smoked. Served Fast.',
+    description: '12-hour smoked brisket. Loaded burgers. Napkins won\'t save you. Order in 60 seconds.',
+    images: ['/images/burger_photo.png'],
   },
   icons: {
     icon: '/images/real_asd_logo.png',
@@ -62,7 +64,7 @@ export default function RootLayout({ children }) {
     "alternateName": "African Spirits Distillery Cafe",
     "image": `${SITE_URL}/images/real_asd_logo.png`,
     "logo": `${SITE_URL}/images/real_asd_logo.png`,
-    "description": "Ghost kitchen serving high-quality smoked brisket burgers, pizza, wings, wraps and corporate lunch menus. Fast pickup in 15–20 mins.",
+    "description": "Born smoked, served fast. ASD Cafe is a ghost kitchen serving 12-hour smoked brisket burgers, pizza, wings, wraps and corporate lunch menus. Ready for pickup in 15–20 mins.",
     "url": SITE_URL,
     "telephone": "+27760578078",
     "email": "info@asdcafe.com",
@@ -107,6 +109,10 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+        {/* Local SEO geo tags */}
+        <meta name="geo.region" content="ZA" />
+        <meta name="geo.country" content="South Africa" />
+        <meta name="language" content="en-ZA" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantSchema) }}
