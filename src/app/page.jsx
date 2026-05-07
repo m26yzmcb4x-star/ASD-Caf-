@@ -24,33 +24,60 @@ const StarIcon = ({ size = 22 }) => (
   </svg>
 );
 
-const BurgerIcon = ({ size = 30 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M20 9H4c-.55 0-1 .45-1 1s.45 1 1 1h1v5c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-5h1c.55 0 1-.45 1-1s-.45-1-1-1zM5.5 6.5C5.5 4.57 8.46 3 12 3s6.5 1.57 6.5 3.5H5.5z"/>
+const BurgerIcon = ({ size = 44 }) => (
+  <svg width={size} height={size} viewBox="0 0 44 44" fill="currentColor" aria-hidden="true">
+    {/* Top bun dome */}
+    <path d="M10 21C10 12 14 7 22 7C30 7 34 12 34 21H10Z"/>
+    {/* Sesame seeds */}
+    <circle cx="16" cy="12" r="2" opacity="0.4"/>
+    <circle cx="22" cy="10" r="2" opacity="0.4"/>
+    <circle cx="28" cy="12" r="2" opacity="0.4"/>
+    {/* Patty */}
+    <rect x="8" y="22" width="28" height="5" rx="2.5"/>
+    {/* Cheese/lettuce layer */}
+    <rect x="9" y="28" width="26" height="3" rx="1.5" opacity="0.6"/>
+    {/* Bottom bun */}
+    <path d="M8 32.5H36V36C36 38.5 34 40 31 40H13C10 40 8 38.5 8 36V32.5Z"/>
   </svg>
 );
 
-const PizzaIcon = ({ size = 30 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M12 2C8.43 2 5.23 3.54 3.01 6L12 22l8.99-16C18.78 3.55 15.57 2 12 2zM7 7c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm5 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+const PizzaIcon = ({ size = 44 }) => (
+  <svg width={size} height={size} viewBox="0 0 44 44" fill="currentColor" aria-hidden="true">
+    {/* Slice with topping holes cut out via evenodd */}
+    <path fillRule="evenodd" d="M22 40L3 4H41Z M15 17a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z M26 17a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z M19.5 28a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z"/>
+    {/* Crust band at wide end */}
+    <path d="M5 6Q22 0 39 6L41 4H3Z" opacity="0.45"/>
   </svg>
 );
 
-const WingIcon = ({ size = 30 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
+const DrumstickIcon = ({ size = 44 }) => (
+  <svg width={size} height={size} viewBox="0 0 44 44" fill="currentColor" aria-hidden="true">
+    {/* Meat (oval) */}
+    <ellipse cx="28" cy="13" rx="13" ry="12"/>
+    {/* Bone shaft (thick diagonal) */}
+    <rect x="5" y="22" width="24" height="7" rx="3.5" transform="rotate(38 17 25.5)"/>
+    {/* Bone knob */}
+    <circle cx="7" cy="36" r="5"/>
   </svg>
 );
 
-const WrapIcon = ({ size = 30 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8.17-15.03-8.17-15.03 0h15.03zM1.02 17h15v2h-15z"/>
+const BowlIcon = ({ size = 44 }) => (
+  <svg width={size} height={size} viewBox="0 0 44 44" fill="currentColor" aria-hidden="true">
+    {/* Bowl body */}
+    <path d="M5 21H39C38 32.5 31 40 22 40C13 40 6 32.5 5 21Z"/>
+    {/* Rim */}
+    <ellipse cx="22" cy="21" rx="17" ry="4.5"/>
   </svg>
 );
 
-const LunchIcon = ({ size = 30 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M20 6h-2.18c.07-.44.18-.88.18-1.34C18 2.54 15.96.5 13.64.5c-1.3 0-2.53.5-3.38 1.5L10 2.44l-.26-.44C8.9 1 7.67.5 6.36.5 4.04.5 2 2.54 2 4.66c0 .46.11.9.18 1.34H0v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8l2-2h-2zm-9.5 0l1.5-2.5 1.5 2.5h-3zm-5 0l1.5-2.5L8.5 6h-3z"/>
+const LunchIcon = ({ size = 44 }) => (
+  <svg width={size} height={size} viewBox="0 0 44 44" fill="currentColor" aria-hidden="true">
+    {/* Box body */}
+    <path d="M7 22H37L35 38C35 39.1 34.1 40 33 40H11C9.9 40 9 39.1 9 38L7 22Z"/>
+    {/* Lid */}
+    <rect x="5" y="16" width="34" height="7" rx="2"/>
+    {/* Handle arch */}
+    <path d="M16 16C16 12 18.7 9.5 22 9.5C25.3 9.5 28 12 28 16H16Z"/>
   </svg>
 );
 
@@ -66,11 +93,6 @@ const BoltIcon = ({ size = 20 }) => (
   </svg>
 );
 
-const IconBadge = ({ children, small = false }) => (
-  <div className={small ? 'icon-badge icon-badge-sm' : 'icon-badge'}>
-    {children}
-  </div>
-);
 
 export default function Home() {
   useEffect(() => {
@@ -161,15 +183,15 @@ export default function Home() {
 
           <div className="hero-bullets">
             <div className="hero-bullet">
-              <IconBadge small><FlameIcon size={18} /></IconBadge>
+              <FlameIcon size={20} />
               Made fresh to order
             </div>
             <div className="hero-bullet">
-              <IconBadge small><BoltIcon size={18} /></IconBadge>
+              <BoltIcon size={20} />
               Ready in 15–20 mins
             </div>
             <div className="hero-bullet">
-              <IconBadge small><StarIcon size={18} /></IconBadge>
+              <StarIcon size={20} />
               Portions that actually fill you
             </div>
           </div>
@@ -209,7 +231,7 @@ export default function Home() {
                 BEST SELLERS — ORDER THESE FIRST
               </div>
               <div style={{display: 'flex', justifyContent: 'center', marginBottom: '16px'}}>
-                <IconBadge><StarIcon size={28} /></IconBadge>
+                <StarIcon size={52} className="section-icon" />
               </div>
               <h2 style={{fontFamily: `'Bebas Neue', sans-serif`, fontSize: 'clamp(52px, 7vw, 72px)', color: 'var(--red)', marginBottom: '10px', marginTop: '0'}}>MOST ORDERED</h2>
               <p style={{fontSize: '20px', fontWeight: 'bold', marginTop: '0', marginBottom: '40px', color: '#444'}}>One bite. You&apos;ll understand.</p>
@@ -261,7 +283,7 @@ export default function Home() {
               <div className="joke-bubble">No clean hands. No regrets.</div>
               <div className="menu-header">
                 <div style={{display: 'flex', alignItems: 'center', gap: '16px'}}>
-                  <IconBadge><BurgerIcon size={28} /></IconBadge>
+                  <BurgerIcon size={48} className="section-icon" />
                   <h2 id="burgers-heading">BURGERS</h2>
                 </div>
               </div>
@@ -326,7 +348,7 @@ export default function Home() {
               <div className="joke-bubble" style={{transform: 'rotate(2deg)'}}>No sharing. We don&apos;t judge.</div>
               <div className="menu-header">
                 <div style={{display: 'flex', alignItems: 'center', gap: '16px'}}>
-                  <IconBadge><PizzaIcon size={28} /></IconBadge>
+                  <PizzaIcon size={48} className="section-icon" />
                   <h2 id="pizza-heading">PIZZA</h2>
                 </div>
               </div>
@@ -391,7 +413,7 @@ export default function Home() {
               <div className="joke-bubble">Napkins won&apos;t save you.</div>
               <div className="menu-header">
                 <div style={{display: 'flex', alignItems: 'center', gap: '16px'}}>
-                  <IconBadge><WingIcon size={28} /></IconBadge>
+                  <DrumstickIcon size={48} className="section-icon" />
                   <h2 id="wings-heading">WINGS &amp; SIDES</h2>
                 </div>
               </div>
@@ -453,7 +475,7 @@ export default function Home() {
               <div className="joke-bubble" style={{transform: 'rotate(-1deg)'}}>Eating healthy never hurt this good.</div>
               <div className="menu-header" style={{textAlign: 'left'}}>
                 <div style={{display: 'flex', alignItems: 'center', gap: '16px'}}>
-                  <IconBadge><WrapIcon size={28} /></IconBadge>
+                  <BowlIcon size={48} className="section-icon" />
                   <h2 id="wraps-heading">WRAPS &amp; BOWLS</h2>
                 </div>
               </div>
@@ -517,7 +539,7 @@ export default function Home() {
         <section className="menu-section" style={{background: 'var(--black)', color: 'white', padding: '80px 5vw'}} aria-labelledby="why-heading">
           <div style={{maxWidth: '700px', margin: '0 auto', textAlign: 'center'}}>
             <div style={{display: 'flex', justifyContent: 'center', marginBottom: '20px'}}>
-              <IconBadge><StarIcon size={28} /></IconBadge>
+              <StarIcon size={52} className="section-icon" />
             </div>
             <h2 id="why-heading" style={{fontFamily: `'Bebas Neue', sans-serif`, fontSize: 'clamp(48px, 7vw, 64px)', color: 'var(--red)', margin: '0 0 30px'}}>WHY ASD?</h2>
             <div style={{fontSize: 'clamp(17px, 2.5vw, 21px)', fontWeight: 500, lineHeight: '1.9', margin: '0 0 30px', textAlign: 'left', display: 'inline-block'}}>
@@ -538,7 +560,7 @@ export default function Home() {
           <div className="combo-block" style={{textAlign: 'center'}}>
             <div className="joke-bubble" style={{background: 'var(--red)', borderColor: 'white', color: 'white', transform: 'rotate(0deg)'}}>Your boss&apos;s credit card approves.</div>
             <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px', marginBottom: '10px'}}>
-              <IconBadge><LunchIcon size={28} /></IconBadge>
+              <LunchIcon size={52} className="section-icon" />
             </div>
             <h3 id="combos-heading" style={{marginTop: '15px'}}>LUNCH SERVICE</h3>
             <p style={{fontSize: '24px', fontFamily: `'Bebas Neue', sans-serif`, marginBottom:'10px'}}>WEEKLY SET MENUS</p>
@@ -577,7 +599,7 @@ export default function Home() {
         <section id="about" aria-labelledby="about-heading" style={{background: 'var(--cream)', padding: '80px 5vw'}}>
           <div className="about-inner" style={{textAlign: 'center', maxWidth: '800px', margin: '0 auto'}}>
             <div style={{display: 'flex', justifyContent: 'center', marginBottom: '20px'}}>
-              <IconBadge><FlameIcon size={28} /></IconBadge>
+              <FlameIcon size={52} className="section-icon" />
             </div>
             <h2 id="about-heading" style={{fontFamily: `'Bebas Neue', sans-serif`, fontSize: 'clamp(48px, 7vw, 64px)', color: 'var(--red)', margin: '0 0 20px', lineHeight: 1}}>OUR STORY</h2>
             <p style={{fontSize: '22px', fontWeight: 500, lineHeight: 1.7, color: '#333', marginBottom: '20px'}}>

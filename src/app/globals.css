@@ -88,14 +88,18 @@ h1 {
 .hero-bullet {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(255,255,255,0.07);
-  border: 1.5px solid rgba(245,230,211,0.2);
+  gap: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(245,230,211,0.18);
   color: var(--cream);
   font-size: 15px;
   font-weight: 700;
-  padding: 8px 16px;
+  padding: 9px 18px;
   letter-spacing: 0.5px;
+}
+.hero-bullet svg {
+  color: var(--red);
+  flex-shrink: 0;
 }
 .hero-cheesy {
   font-size: 15px;
@@ -186,24 +190,11 @@ h1 {
   background: repeating-linear-gradient(90deg, var(--red) 0 8px, transparent 8px 16px);
 }
 
-/* ========== ICON BADGE ========== */
-.icon-badge {
-  width: 56px;
-  height: 56px;
-  background: var(--red);
-  border: 3px solid var(--black);
-  box-shadow: 4px 4px 0 var(--black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+/* ========== SECTION ICONS ========== */
+.section-icon {
+  color: var(--red);
+  filter: drop-shadow(2px 3px 0 rgba(0,0,0,0.12));
   flex-shrink: 0;
-}
-.icon-badge-sm {
-  width: 34px;
-  height: 34px;
-  box-shadow: 2px 2px 0 var(--black);
-  border-width: 2px;
 }
 
 /* ========== SECTION LABEL ========== */
