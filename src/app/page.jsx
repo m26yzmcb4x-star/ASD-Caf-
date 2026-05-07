@@ -128,11 +128,6 @@ export default function Home() {
           <a href="#menu-start" className="btn btn-secondary" id="nav-menu">MENU</a>
           <a href="#gallery" className="btn btn-secondary" id="nav-gallery">GALLERY</a>
         </div>
-        <div className="brand">
-          <a href="/" aria-label="ASD Cafe — Home">
-            <img src="/images/real_asd_logo.png" alt="ASD Cafe Logo" />
-          </a>
-        </div>
         <div className="nav-right">
           <a href={uberEatsLink} className="btn btn-delivery uber-btn nav-delivery" target="_blank" rel="noopener noreferrer" aria-label="Order on Uber Eats">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style={{marginRight:'5px'}}><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
@@ -158,6 +153,9 @@ export default function Home() {
         </div>
 
         <div id="heroContent">
+          <a href="/" aria-label="ASD Cafe — Home">
+            <img src="/images/real_asd_logo.png" alt="ASD Cafe" className="hero-logo" />
+          </a>
           <h1 id="hero-heading">BORN SMOKED.<br/>SERVED FAST.</h1>
           <div className="tagline" style={{marginTop: '20px', marginBottom: '28px', textTransform:'none', letterSpacing:'1px', fontSize:'22px'}}>Smoked brisket. Loaded burgers. No waiting around.</div>
 
