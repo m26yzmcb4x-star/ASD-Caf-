@@ -25,59 +25,67 @@ const StarIcon = ({ size = 22 }) => (
 );
 
 const BurgerIcon = ({ size = 44 }) => (
-  <svg width={size} height={size} viewBox="0 0 44 44" fill="currentColor" aria-hidden="true">
+  <svg width={size} height={size} viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     {/* Top bun dome */}
-    <path d="M10 21C10 12 14 7 22 7C30 7 34 12 34 21H10Z"/>
-    {/* Sesame seeds */}
-    <circle cx="16" cy="12" r="2" opacity="0.4"/>
-    <circle cx="22" cy="10" r="2" opacity="0.4"/>
-    <circle cx="28" cy="12" r="2" opacity="0.4"/>
+    <path d="M8 20C8 11 13 7 22 7C31 7 36 11 36 20Z" fill="rgba(215,38,46,0.1)"/>
+    {/* Sesame seeds (solid, tilted) */}
+    <ellipse cx="16" cy="12" rx="2.2" ry="1.2" fill="currentColor" stroke="none" transform="rotate(-20 16 12)"/>
+    <ellipse cx="22" cy="10" rx="2.2" ry="1.2" fill="currentColor" stroke="none" transform="rotate(8 22 10)"/>
+    <ellipse cx="28" cy="12" rx="2.2" ry="1.2" fill="currentColor" stroke="none" transform="rotate(-15 28 12)"/>
     {/* Patty */}
-    <rect x="8" y="22" width="28" height="5" rx="2.5"/>
-    {/* Cheese/lettuce layer */}
-    <rect x="9" y="28" width="26" height="3" rx="1.5" opacity="0.6"/>
+    <rect x="7" y="21" width="30" height="5.5" rx="2.75" fill="rgba(215,38,46,0.18)"/>
+    {/* Lettuce wave */}
+    <path d="M7 28Q10.5 25 14 28Q17.5 31 21 28Q24.5 25 28 28Q31.5 31 35 28Q36.5 27 37 27.5" fill="none"/>
     {/* Bottom bun */}
-    <path d="M8 32.5H36V36C36 38.5 34 40 31 40H13C10 40 8 38.5 8 36V32.5Z"/>
+    <path d="M7 30H37V34.5C37 37 35 38.5 32 38.5H12C9 38.5 7 37 7 34.5Z" fill="rgba(215,38,46,0.1)"/>
   </svg>
 );
 
 const PizzaIcon = ({ size = 44 }) => (
-  <svg width={size} height={size} viewBox="0 0 44 44" fill="currentColor" aria-hidden="true">
-    {/* Slice with topping holes cut out via evenodd */}
-    <path fillRule="evenodd" d="M22 40L3 4H41Z M15 17a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z M26 17a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z M19.5 28a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z"/>
-    {/* Crust band at wide end */}
-    <path d="M5 6Q22 0 39 6L41 4H3Z" opacity="0.45"/>
+  <svg width={size} height={size} viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {/* Slice body */}
+    <path d="M22 40L3 6H41L22 40Z" fill="rgba(215,38,46,0.1)"/>
+    {/* Thick curved crust at wide end */}
+    <path d="M5 8Q22 2 39 8" strokeWidth="4" strokeLinecap="round"/>
+    {/* Toppings — medium-fill circles with outline */}
+    <circle cx="17" cy="21" r="2.8" fill="rgba(215,38,46,0.45)" strokeWidth="1.5"/>
+    <circle cx="27" cy="21" r="2.8" fill="rgba(215,38,46,0.45)" strokeWidth="1.5"/>
+    <circle cx="22" cy="31" r="2.8" fill="rgba(215,38,46,0.45)" strokeWidth="1.5"/>
   </svg>
 );
 
 const DrumstickIcon = ({ size = 44 }) => (
-  <svg width={size} height={size} viewBox="0 0 44 44" fill="currentColor" aria-hidden="true">
-    {/* Meat (oval) */}
-    <ellipse cx="28" cy="13" rx="13" ry="12"/>
-    {/* Bone shaft (thick diagonal) */}
-    <rect x="5" y="22" width="24" height="7" rx="3.5" transform="rotate(38 17 25.5)"/>
+  <svg width={size} height={size} viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+    {/* Meat oval */}
+    <ellipse cx="27" cy="14" rx="13" ry="12" fill="rgba(215,38,46,0.1)"/>
+    {/* Bone shaft — thick line */}
+    <line x1="20" y1="24" x2="8" y2="37" strokeWidth="3.5"/>
     {/* Bone knob */}
-    <circle cx="7" cy="36" r="5"/>
+    <circle cx="8" cy="38" r="5" fill="rgba(215,38,46,0.1)"/>
+    {/* Subtle meat texture line */}
+    <path d="M20 9Q24 7 28 9" strokeWidth="1.5" strokeLinecap="round"/>
   </svg>
 );
 
 const BowlIcon = ({ size = 44 }) => (
-  <svg width={size} height={size} viewBox="0 0 44 44" fill="currentColor" aria-hidden="true">
+  <svg width={size} height={size} viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {/* Food mound peeking above rim */}
+    <path d="M11 20C13 15 17 12 22 12C27 12 31 15 33 20Z" fill="rgba(215,38,46,0.18)" stroke="none"/>
     {/* Bowl body */}
-    <path d="M5 21H39C38 32.5 31 40 22 40C13 40 6 32.5 5 21Z"/>
-    {/* Rim */}
-    <ellipse cx="22" cy="21" rx="17" ry="4.5"/>
+    <path d="M5 20H39C38 32 31 40 22 40C13 40 6 32 5 20Z" fill="rgba(215,38,46,0.08)"/>
+    {/* Rim line */}
+    <line x1="3" y1="20" x2="41" y2="20"/>
   </svg>
 );
 
 const LunchIcon = ({ size = 44 }) => (
-  <svg width={size} height={size} viewBox="0 0 44 44" fill="currentColor" aria-hidden="true">
+  <svg width={size} height={size} viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     {/* Box body */}
-    <path d="M7 22H37L35 38C35 39.1 34.1 40 33 40H11C9.9 40 9 39.1 9 38L7 22Z"/>
+    <path d="M9 22H35L33 38C33 39.1 32.1 40 31 40H13C11.9 40 11 39.1 11 38L9 22Z" fill="rgba(215,38,46,0.1)"/>
     {/* Lid */}
-    <rect x="5" y="16" width="34" height="7" rx="2"/>
+    <rect x="6" y="16" width="32" height="7" rx="2" fill="rgba(215,38,46,0.16)"/>
     {/* Handle arch */}
-    <path d="M16 16C16 12 18.7 9.5 22 9.5C25.3 9.5 28 12 28 16H16Z"/>
+    <path d="M16 16C16 12.5 18.7 10 22 10C25.3 10 28 12.5 28 16"/>
   </svg>
 );
 
@@ -143,6 +151,14 @@ export default function Home() {
       </div>
 
       <div className="noise-overlay" aria-hidden="true"></div>
+
+      {/* ========== PAGE CORNER FRAME ========== */}
+      <div className="page-frame" aria-hidden="true">
+        <div className="frame-tl"/>
+        <div className="frame-tr"/>
+        <div className="frame-bl"/>
+        <div className="frame-br"/>
+      </div>
 
       {/* ========== NAVIGATION ========== */}
       <nav className="nav-pill" aria-label="Main navigation">

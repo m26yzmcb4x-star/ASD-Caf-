@@ -1,6 +1,8 @@
 :root {
   color-scheme: light;
   --red: #D7262E;
+  --red-dark: #8B1519;
+  --red-light: rgba(215,38,46,0.1);
   --cream: #F5E6D3;
   --black: #111111;
   --ink: #1a1a1a;
@@ -98,7 +100,7 @@ h1 {
   letter-spacing: 0.5px;
 }
 .hero-bullet svg {
-  color: var(--red);
+  color: var(--red-dark);
   flex-shrink: 0;
 }
 .hero-cheesy {
@@ -192,10 +194,30 @@ h1 {
 
 /* ========== SECTION ICONS ========== */
 .section-icon {
-  color: var(--red);
-  filter: drop-shadow(2px 3px 0 rgba(0,0,0,0.12));
+  color: var(--red-dark);
+  filter: drop-shadow(1px 2px 0 rgba(139,21,25,0.2));
   flex-shrink: 0;
 }
+
+/* ========== PAGE CORNER FRAME ========== */
+.page-frame {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 400;
+}
+.page-frame > div {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border-color: var(--red);
+  border-style: solid;
+  opacity: 0.5;
+}
+.frame-tl { top: 18px; left: 18px; border-width: 3px 0 0 3px; }
+.frame-tr { top: 18px; right: 18px; border-width: 3px 3px 0 0; }
+.frame-bl { bottom: 18px; left: 18px; border-width: 0 0 3px 3px; }
+.frame-br { bottom: 18px; right: 18px; border-width: 0 3px 3px 0; }
 
 /* ========== SECTION LABEL ========== */
 .section-label {
@@ -222,6 +244,13 @@ section.menu-section {
   padding: 80px 5vw;
   position: relative;
   background: var(--cream);
+}
+section.menu-section::before {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border: 1.5px dashed rgba(215,38,46,0.18);
+  pointer-events: none;
 }
 section.menu-section.alt-bg {
   background: #ede0cc;
