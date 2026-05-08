@@ -143,6 +143,7 @@ h1 {
   width: auto;
   display: block;
   margin: 0 auto 20px;
+  mix-blend-mode: lighten;
   filter: drop-shadow(0 4px 24px rgba(215,38,46,0.4));
 }
 
@@ -521,6 +522,7 @@ footer {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  mix-blend-mode: lighten;
   filter: drop-shadow(0 4px 16px rgba(215,38,46,0.25));
 }
 .footer-email-link {
