@@ -193,32 +193,45 @@ h1 {
   background: repeating-linear-gradient(90deg, var(--red) 0 8px, transparent 8px 16px);
 }
 
-/* ========== SECTION ICONS ========== */
-.section-icon {
-  color: var(--red-dark);
-  filter: drop-shadow(1px 2px 0 rgba(139,21,25,0.2));
+/* ========== RETRO ICON IMAGES ========== */
+.retro-icon-wrap {
+  width: 88px;
+  height: 88px;
+  background: var(--black);
+  border-radius: 10px;
+  border: 2px solid var(--red);
+  box-shadow: 0 0 14px rgba(215,38,46,0.4), 0 0 28px rgba(215,38,46,0.15);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
+.retro-icon-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.retro-icon-lg {
+  width: 130px;
+  height: 130px;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(215,38,46,0.5), 0 0 40px rgba(215,38,46,0.2);
+}
 
-/* ========== PAGE CORNER FRAME ========== */
+/* ========== PAGE BORDER FRAME ========== */
 .page-frame {
   position: fixed;
-  inset: 0;
+  inset: 14px;
   pointer-events: none;
   z-index: 400;
+  border: 2px solid rgba(215,38,46,0.55);
+  box-shadow:
+    0 0 0 1px rgba(215,38,46,0.12),
+    0 0 18px rgba(215,38,46,0.18),
+    inset 0 0 18px rgba(215,38,46,0.06);
 }
-.page-frame > div {
-  position: absolute;
-  width: 52px;
-  height: 52px;
-  border-color: var(--red);
-  border-style: solid;
-  opacity: 0.5;
-}
-.frame-tl { top: 18px; left: 18px; border-width: 3px 0 0 3px; }
-.frame-tr { top: 18px; right: 18px; border-width: 3px 3px 0 0; }
-.frame-bl { bottom: 18px; left: 18px; border-width: 0 0 3px 3px; }
-.frame-br { bottom: 18px; right: 18px; border-width: 0 3px 3px 0; }
 
 /* ========== SECTION LABEL ========== */
 .section-label {
@@ -249,8 +262,9 @@ section.menu-section {
 section.menu-section::before {
   content: '';
   position: absolute;
-  inset: 14px;
-  border: 1.5px dashed rgba(215,38,46,0.18);
+  inset: 12px;
+  border: 1.5px solid rgba(215,38,46,0.22);
+  box-shadow: inset 0 0 16px rgba(215,38,46,0.04);
   pointer-events: none;
 }
 section.menu-section.alt-bg {

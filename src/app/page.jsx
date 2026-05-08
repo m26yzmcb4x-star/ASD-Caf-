@@ -24,69 +24,10 @@ const StarIcon = ({ size = 22 }) => (
   </svg>
 );
 
-const BurgerIcon = ({ size = 44 }) => (
-  <svg width={size} height={size} viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    {/* Top bun dome */}
-    <path d="M8 20C8 11 13 7 22 7C31 7 36 11 36 20Z" fill="rgba(215,38,46,0.1)"/>
-    {/* Sesame seeds (solid, tilted) */}
-    <ellipse cx="16" cy="12" rx="2.2" ry="1.2" fill="currentColor" stroke="none" transform="rotate(-20 16 12)"/>
-    <ellipse cx="22" cy="10" rx="2.2" ry="1.2" fill="currentColor" stroke="none" transform="rotate(8 22 10)"/>
-    <ellipse cx="28" cy="12" rx="2.2" ry="1.2" fill="currentColor" stroke="none" transform="rotate(-15 28 12)"/>
-    {/* Patty */}
-    <rect x="7" y="21" width="30" height="5.5" rx="2.75" fill="rgba(215,38,46,0.18)"/>
-    {/* Lettuce wave */}
-    <path d="M7 28Q10.5 25 14 28Q17.5 31 21 28Q24.5 25 28 28Q31.5 31 35 28Q36.5 27 37 27.5" fill="none"/>
-    {/* Bottom bun */}
-    <path d="M7 30H37V34.5C37 37 35 38.5 32 38.5H12C9 38.5 7 37 7 34.5Z" fill="rgba(215,38,46,0.1)"/>
-  </svg>
-);
-
-const PizzaIcon = ({ size = 44 }) => (
-  <svg width={size} height={size} viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    {/* Slice body */}
-    <path d="M22 40L3 6H41L22 40Z" fill="rgba(215,38,46,0.1)"/>
-    {/* Thick curved crust at wide end */}
-    <path d="M5 8Q22 2 39 8" strokeWidth="4" strokeLinecap="round"/>
-    {/* Toppings — medium-fill circles with outline */}
-    <circle cx="17" cy="21" r="2.8" fill="rgba(215,38,46,0.45)" strokeWidth="1.5"/>
-    <circle cx="27" cy="21" r="2.8" fill="rgba(215,38,46,0.45)" strokeWidth="1.5"/>
-    <circle cx="22" cy="31" r="2.8" fill="rgba(215,38,46,0.45)" strokeWidth="1.5"/>
-  </svg>
-);
-
-const DrumstickIcon = ({ size = 44 }) => (
-  <svg width={size} height={size} viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-    {/* Meat oval */}
-    <ellipse cx="27" cy="14" rx="13" ry="12" fill="rgba(215,38,46,0.1)"/>
-    {/* Bone shaft — thick line */}
-    <line x1="20" y1="24" x2="8" y2="37" strokeWidth="3.5"/>
-    {/* Bone knob */}
-    <circle cx="8" cy="38" r="5" fill="rgba(215,38,46,0.1)"/>
-    {/* Subtle meat texture line */}
-    <path d="M20 9Q24 7 28 9" strokeWidth="1.5" strokeLinecap="round"/>
-  </svg>
-);
-
-const BowlIcon = ({ size = 44 }) => (
-  <svg width={size} height={size} viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    {/* Food mound peeking above rim */}
-    <path d="M11 20C13 15 17 12 22 12C27 12 31 15 33 20Z" fill="rgba(215,38,46,0.18)" stroke="none"/>
-    {/* Bowl body */}
-    <path d="M5 20H39C38 32 31 40 22 40C13 40 6 32 5 20Z" fill="rgba(215,38,46,0.08)"/>
-    {/* Rim line */}
-    <line x1="3" y1="20" x2="41" y2="20"/>
-  </svg>
-);
-
-const LunchIcon = ({ size = 44 }) => (
-  <svg width={size} height={size} viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    {/* Box body */}
-    <path d="M9 22H35L33 38C33 39.1 32.1 40 31 40H13C11.9 40 11 39.1 11 38L9 22Z" fill="rgba(215,38,46,0.1)"/>
-    {/* Lid */}
-    <rect x="6" y="16" width="32" height="7" rx="2" fill="rgba(215,38,46,0.16)"/>
-    {/* Handle arch */}
-    <path d="M16 16C16 12.5 18.7 10 22 10C25.3 10 28 12.5 28 16"/>
-  </svg>
+const RetroIcon = ({ src, alt = '', large = false }) => (
+  <div className={large ? 'retro-icon-wrap retro-icon-lg' : 'retro-icon-wrap'}>
+    <img src={src} alt={alt} />
+  </div>
 );
 
 const AlertIcon = ({ size = 20 }) => (
@@ -152,13 +93,8 @@ export default function Home() {
 
       <div className="noise-overlay" aria-hidden="true"></div>
 
-      {/* ========== PAGE CORNER FRAME ========== */}
-      <div className="page-frame" aria-hidden="true">
-        <div className="frame-tl"/>
-        <div className="frame-tr"/>
-        <div className="frame-bl"/>
-        <div className="frame-br"/>
-      </div>
+      {/* ========== PAGE BORDER FRAME ========== */}
+      <div className="page-frame" aria-hidden="true"/>
 
       {/* ========== NAVIGATION ========== */}
       <nav className="nav-pill" aria-label="Main navigation">
@@ -247,7 +183,7 @@ export default function Home() {
                 BEST SELLERS — ORDER THESE FIRST
               </div>
               <div style={{display: 'flex', justifyContent: 'center', marginBottom: '16px'}}>
-                <StarIcon size={52} className="section-icon" />
+                <RetroIcon src="/images/retro_burger.png" large />
               </div>
               <h2 style={{fontFamily: `'Bebas Neue', sans-serif`, fontSize: 'clamp(52px, 7vw, 72px)', color: 'var(--red)', marginBottom: '10px', marginTop: '0'}}>MOST ORDERED</h2>
               <p style={{fontSize: '20px', fontWeight: 'bold', marginTop: '0', marginBottom: '40px', color: '#444'}}>One bite. You&apos;ll understand.</p>
@@ -299,7 +235,7 @@ export default function Home() {
               <div className="joke-bubble">No clean hands. No regrets.</div>
               <div className="menu-header">
                 <div style={{display: 'flex', alignItems: 'center', gap: '16px'}}>
-                  <BurgerIcon size={48} className="section-icon" />
+                  <RetroIcon src="/images/retro_burger.png" />
                   <h2 id="burgers-heading">BURGERS</h2>
                 </div>
               </div>
@@ -364,7 +300,7 @@ export default function Home() {
               <div className="joke-bubble" style={{transform: 'rotate(2deg)'}}>No sharing. We don&apos;t judge.</div>
               <div className="menu-header">
                 <div style={{display: 'flex', alignItems: 'center', gap: '16px'}}>
-                  <PizzaIcon size={48} className="section-icon" />
+                  <RetroIcon src="/images/retro_pizza.png" />
                   <h2 id="pizza-heading">PIZZA</h2>
                 </div>
               </div>
@@ -429,7 +365,7 @@ export default function Home() {
               <div className="joke-bubble">Napkins won&apos;t save you.</div>
               <div className="menu-header">
                 <div style={{display: 'flex', alignItems: 'center', gap: '16px'}}>
-                  <DrumstickIcon size={48} className="section-icon" />
+                  <RetroIcon src="/images/retro_wings.png" />
                   <h2 id="wings-heading">WINGS &amp; SIDES</h2>
                 </div>
               </div>
@@ -491,7 +427,7 @@ export default function Home() {
               <div className="joke-bubble" style={{transform: 'rotate(-1deg)'}}>Eating healthy never hurt this good.</div>
               <div className="menu-header" style={{textAlign: 'left'}}>
                 <div style={{display: 'flex', alignItems: 'center', gap: '16px'}}>
-                  <BowlIcon size={48} className="section-icon" />
+                  <RetroIcon src="/images/retro_coffee.png" />
                   <h2 id="wraps-heading">WRAPS &amp; BOWLS</h2>
                 </div>
               </div>
@@ -555,7 +491,7 @@ export default function Home() {
         <section className="menu-section" style={{background: 'var(--black)', color: 'white', padding: '80px 5vw'}} aria-labelledby="why-heading">
           <div style={{maxWidth: '700px', margin: '0 auto', textAlign: 'center'}}>
             <div style={{display: 'flex', justifyContent: 'center', marginBottom: '20px'}}>
-              <StarIcon size={52} className="section-icon" />
+              <RetroIcon src="/images/retro_jukebox.png" large />
             </div>
             <h2 id="why-heading" style={{fontFamily: `'Bebas Neue', sans-serif`, fontSize: 'clamp(48px, 7vw, 64px)', color: 'var(--red)', margin: '0 0 30px'}}>WHY ASD?</h2>
             <div style={{fontSize: 'clamp(17px, 2.5vw, 21px)', fontWeight: 500, lineHeight: '1.9', margin: '0 0 30px', textAlign: 'left', display: 'inline-block'}}>
@@ -576,7 +512,7 @@ export default function Home() {
           <div className="combo-block" style={{textAlign: 'center'}}>
             <div className="joke-bubble" style={{background: 'var(--red)', borderColor: 'white', color: 'white', transform: 'rotate(0deg)'}}>Your boss&apos;s credit card approves.</div>
             <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px', marginBottom: '10px'}}>
-              <LunchIcon size={52} className="section-icon" />
+              <RetroIcon src="/images/takeaway_box_1774939874043.png" large />
             </div>
             <h3 id="combos-heading" style={{marginTop: '15px'}}>LUNCH SERVICE</h3>
             <p style={{fontSize: '24px', fontFamily: `'Bebas Neue', sans-serif`, marginBottom:'10px'}}>WEEKLY SET MENUS</p>
@@ -615,7 +551,7 @@ export default function Home() {
         <section id="about" aria-labelledby="about-heading" style={{background: 'var(--cream)', padding: '80px 5vw'}}>
           <div className="about-inner" style={{textAlign: 'center', maxWidth: '800px', margin: '0 auto'}}>
             <div style={{display: 'flex', justifyContent: 'center', marginBottom: '20px'}}>
-              <FlameIcon size={52} className="section-icon" />
+              <RetroIcon src="/images/retro_jukebox.png" large />
             </div>
             <h2 id="about-heading" style={{fontFamily: `'Bebas Neue', sans-serif`, fontSize: 'clamp(48px, 7vw, 64px)', color: 'var(--red)', margin: '0 0 20px', lineHeight: 1}}>OUR STORY</h2>
             <p style={{fontSize: '22px', fontWeight: 500, lineHeight: 1.7, color: '#333', marginBottom: '20px'}}>
